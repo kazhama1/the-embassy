@@ -1,7 +1,7 @@
 
 .topnav{
     background-color: green;
-    padding: 7px;
+    padding:60px 20px;
     margin:-10px;
     margin-right: 0px;
     margin-left: 0px;
@@ -21,16 +21,16 @@
   height: 90px;
   width: auto;
   display: block;
-  margin-top: 20px;
+  margin-top: 34px;
   display: inline;
 }
 
 .topnav li{
     float: left;
-    padding-top: 10px;
+    padding-top: 35px;
     padding-left: -20px;
     padding-right: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
     text-align: center;
     overflow:auto;
     display: inline;
