@@ -1,0 +1,193 @@
+/* ================= PASSPORT PAGE ================= */
+
+.logo img {
+  height: 90px;
+  width: auto;
+  display: block;
+  margin-top: 20px;
+  display: inline;
+}
+.service{
+    color: green;
+}
+
+.page-banner{
+    background:green;
+    color:white;
+    padding:60px 20px;
+    text-align:center;
+    font-family: sans-serif;
+}
+
+.customs{
+    color: green;
+}
+h3{
+    color: green;
+}
+
+.passport-container{
+    width:90%;
+    max-width:1200px;
+    margin:50px auto;
+    font-family: sans-serif;
+}
+
+.info-box{
+    border-style: solid;
+    border-width: 2px;
+    border-color: orange;
+    text-align: center;
+    
+}
+
+.btn{
+    color: black;
+    transition: 0.2s;
+}
+.btn:hover{
+    color: orange;
+    transition: 0.2s;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+    margin-top:30px;
+}
+
+.service-card{
+    background:white;
+    padding:30px;
+    border-radius:8px;
+    box-shadow:0 4px 15px rgba(0,0,0,.12);
+    transition:.3s;
+    font-family: sans-serif;
+
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+}
+
+.service-card h3{
+    color:#006400;
+    margin-bottom:15px;
+    font-family: sans-serif;
+
+}
+
+.service-card ul{
+    margin:20px 0;
+    padding-left:20px;
+    font-family: sans-serif;
+
+}
+
+.service-card li{
+    margin-bottom:10px;
+}
+
+.passport-process,
+.fees,
+.downloads{
+
+    background:white;
+    padding:35px;
+    margin-top:40px;
+    border-radius:8px;
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+    font-family: sans-serif;
+
+
+}
+
+.passport-process ol{
+    margin-left:20px;
+}
+
+.passport-process li{
+    margin-bottom:12px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+    font-family: sans-serif;
+
+}
+
+table th{
+    background:#006400;
+    color:white;
+    padding:15px;
+    font-family: sans-serif;
+
+}
+
+table td{
+    padding:15px;
+    border:1px solid #ddd;
+}
+
+table tr:nth-child(even){
+    background:#f7f7f7;
+}
+
+.notice{
+
+    margin-top:20px;
+    background:#fff8e5;
+    border-left:5px solid orange;
+    padding:20px;
+    font-family: sans-serif;
+
+
+}
+
+.downloads{
+    text-align:center;
+    font-family: sans-serif;
+
+}
+
+.downloads .btn{
+    margin:10px;
+}
+
+@media(max-width:768px){
+
+table{
+    font-size:14px;
+}
+
+.passport-container{
+    width:95%;
+}
+
+}
+
+
+
+
+
+
+
+
+.end{
+    display: inline;
+    text-align: center;
+    font-size: 13px;
+    font-family:sans-serif;
+    
+}
+.end-container{
+    background-color: rgb(183, 182, 182);
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: -50px;
+    padding: 10px;
+}
+

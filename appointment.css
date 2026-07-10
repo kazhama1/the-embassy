@@ -1,0 +1,140 @@
+/* ===========================
+   APPOINTMENTS PAGE
+=========================== */
+
+.logo img {
+  height: 90px;
+  width: auto;
+  display: block;
+  margin-top: 20px;
+  display: inline;
+}
+
+.page-banner{
+    background:green;
+    color:white;
+    padding:60px 20px;
+    text-align:center;
+    font-family: sans-serif;
+}
+
+.page-banner h2{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.appointment-section{
+    background:#f4f4f4;
+    padding:60px 20px;
+}
+
+.appointment-container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+    font-family: sans-serif;
+}
+
+.appointment-container h2{
+    color:#006400;
+    margin-bottom:30px;
+    text-align:center;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group label{
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    outline:none;
+    border-color:#006400;
+    box-shadow:0 0 6px rgba(0,100,0,.3);
+}
+
+.full-width{
+    margin-top:25px;
+}
+
+textarea{
+    resize:vertical;
+}
+
+.submit-btn{
+    margin-top:30px;
+    width:100%;
+    padding:15px;
+    border:none;
+    background:#006400;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.submit-btn:hover{
+    background:#004d00;
+}
+
+.active{
+    color:#ffcc00;
+}
+
+@media(max-width:768px){
+
+.appointment-container{
+    padding:25px;
+}
+
+.page-banner h2{
+    font-size:30px;
+}
+
+}
+
+
+
+
+
+.end{
+    display: inline;
+    text-align: center;
+    font-size: 13px;
+    font-family:sans-serif;
+}
+.end-container{
+    
+    background-color: rgb(183, 182, 182);
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: -10px;
+    padding: 10px;
+}

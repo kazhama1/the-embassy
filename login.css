@@ -1,0 +1,298 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:sans-serif;
+}
+
+body{
+
+    background:#f2f4f7;
+    background-image:
+    linear-gradient(
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+    ),
+    url("Victoria-falls-1-1024x683-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: auto;
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+}
+
+.login-container{
+
+    width:420px;
+
+    background:#fff;
+
+    border-radius:10px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+    padding:40px;
+
+}
+
+.login-header{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+.login-header img{
+
+    width:90px;
+
+    margin-bottom:15px;
+
+}
+
+.login-header h2{
+
+    color:#006400;
+
+    margin-bottom:5px;
+
+}
+
+.login-header p{
+
+    color:#666;
+
+}
+
+.input-box{
+
+    margin-bottom:20px;
+
+}
+
+.input-box label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:bold;
+
+}
+
+.input-field{
+
+    display:flex;
+
+    align-items:center;
+
+    border:1px solid #ccc;
+
+    border-radius:6px;
+
+    overflow:hidden;
+
+}
+
+.input-field i{
+
+    width:50px;
+
+    text-align:center;
+
+    color:#006400;
+
+}
+
+.input-field input{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    padding:14px;
+
+    font-size:15px;
+
+}
+
+.input-field:focus-within{
+
+    border-color:#006400;
+
+    box-shadow:0 0 8px rgba(0,100,0,.2);
+
+}
+
+.login-options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:20px 0;
+
+    font-size:14px;
+
+}
+
+.login-options a{
+
+    text-decoration:none;
+
+    color:#006400;
+
+    font-weight:bold;
+
+}
+
+.login-options a:hover{
+
+    text-decoration:underline;
+
+}
+
+.login-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    background:#006400;
+
+    color:white;
+
+    border:none;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.login-btn:hover{
+
+    background:#004d00;
+
+}
+
+.divider{
+
+    margin:30px 0;
+
+    text-align:center;
+
+    position:relative;
+
+}
+
+.divider::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:50%;
+
+    width:100%;
+
+    height:1px;
+
+    background:#ddd;
+
+}
+
+.divider span{
+
+    background:white;
+
+    padding:0 15px;
+
+    position:relative;
+
+    color:#777;
+
+}
+
+.register-btn{
+
+    display:block;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    background:#d71920;
+
+    color:white;
+
+    padding:14px;
+
+    border-radius:6px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.register-btn:hover{
+
+    background:#b5151a;
+
+}
+
+.footer-links{
+
+    margin-top:25px;
+
+    text-align:center;
+
+}
+
+.footer-links a{
+
+    text-decoration:none;
+
+    color:#006400;
+
+    font-weight:bold;
+
+}
+
+.footer-links a:hover{
+
+    text-decoration:underline;
+
+}
+
+@media(max-width:500px){
+
+.login-container{
+
+    width:95%;
+
+    padding:25px;
+
+}
+
+}

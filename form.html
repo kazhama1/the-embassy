@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<section class="page-banner">
+    <nav class="topnav">
+        <a href="index.html" class="logo">
+    <img src="favicon.svg" alt="My Website Logo"></a>
+    <div class="container">
+      
+    </div>
+</section>
+
+
+
+<form action="submit_visa.php" method="POST" enctype="multipart/form-data" class="visa-form">
+
+    <h2>Online Visa Application Form</h2>
+
+    <!-- ================= PERSONAL DETAILS ================= -->
+
+    <h3>1. Personal Information</h3>
+
+    <div class="form-grid">
+
+        <div class="form-group">
+            <label>Surname *</label>
+            <input type="text" name="surname" required>
+        </div>
+
+        <div class="form-group">
+            <label>Given Name(s) *</label>
+            <input type="text" name="firstname" required>
+        </div>
+
+        <div class="form-group">
+            <label>Gender *</label>
+            <select name="gender" required>
+                <option value="">Select</option>
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Date of Birth *</label>
+            <input type="date" name="dob" required>
+        </div>
+
+        <div class="form-group">
+            <label>Place of Birth *</label>
+            <input type="text" name="birthplace" required>
+        </div>
+
+        <div class="form-group">
+            <label>Country of Birth *</label>
+            <input type="text" name="birthcountry" required>
+        </div>
+
+        <div class="form-group">
+            <label>Nationality *</label>
+            <input type="text" name="nationality" required>
+        </div>
+
+        <div class="form-group">
+            <label>Marital Status *</label>
+            <select name="maritalStatus">
+                <option>Single</option>
+                <option>Married</option>
+                <option>Divorced</option>
+                <option>Widowed</option>
+            </select>
+        </div>
+
+    </div>
+
+    <!-- ================= CONTACT DETAILS ================= -->
+
+    <h3>2. Contact Information</h3>
+
+    <div class="form-grid">
+
+        <div class="form-group">
+            <label>Email Address *</label>
+            <input type="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label>Phone Number *</label>
+            <input type="tel" name="phone" required>
+        </div>
+
+        <div class="form-group full-width">
+            <label>Residential Address *</label>
+            <textarea name="address" rows="3" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>City *</label>
+            <input type="text" name="city" required>
+        </div>
+
+        <div class="form-group">
+            <label>Country *</label>
+            <input type="text" name="country" required>
+        </div>
+
+        <div class="form-group">
+            <label>Postal Code</label>
+            <input type="text" name="postal">
+        </div>
+
+    </div>
+
+    <!-- ================= PASSPORT ================= -->
+
+    <h3>3. Passport Information</h3>
+
+    <div class="form-grid">
+
+        <div class="form-group">
+            <label>Passport Number *</label>
+            <input type="text" name="passport" required>
+        </div>
+
+        <div class="form-group">
+            <label>Passport Type *</label>
+            <select name="passportType">
+                <option>Ordinary</option>
+                <option>Diplomatic</option>
+                <option>Official</option>
+                <option>Service</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Country of Issue *</label>
+            <input type="text" name="passportCountry" required>
+        </div>
+
+        <div class="form-group">
+            <label>Date of Issue *</label>
+            <input type="date" name="issueDate" required>
+        </div>
+
+        <div class="form-group">
+            <label>Expiry Date *</label>
+            <input type="date" name="expiryDate" required>
+        </div>
+
+        <div class="form-group">
+            <label>Issuing Authority *</label>
+            <input type="text" name="authority" required>
+        </div>
+
+    </div>
+
+    <!-- ================= VISA DETAILS ================= -->
+
+    <h3>4. Visa Information</h3>
+
+    <div class="form-grid">
+
+        <div class="form-group">
+            <label>Visa Type *</label>
+            <select name="visaType" required>
+                <option value="">Select</option>
+                <option>Tourist Visa</option>
+                <option>Business Visa</option>
+                <option>Transit Visa</option>
+                <option>Student Visa</option>
+                <option>Employment Visa</option>
+                <option>Diplomatic Visa</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Entry Type *</label>
+            <select name="entryType">
+                <option>Single Entry</option>
+                <option>Double Entry</option>
+                <option>Multiple Entry</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Intended Arrival Date *</label>
+            <input type="date" name="arrival" required>
+        </div>
+
+        <div class="form-group">
+            <label>Intended Departure Date *</label>
+            <input type="date" name="departure" required>
+        </div>
+
+        <div class="form-group full-width">
+            <label>Purpose of Visit *</label>
+            <textarea name="purpose" rows="4" required></textarea>
+        </div>
+
+    </div>
+
+    <!-- ================= HOST DETAILS ================= -->
+
+    <h3>5. Host / Accommodation in Zambia</h3>
+
+    <div class="form-grid">
+
+        <div class="form-group">
+            <label>Host Name / Hotel</label>
+            <input type="text" name="host">
+        </div>
+
+        <div class="form-group">
+            <label>Host Telephone</label>
+            <input type="text" name="hostPhone">
+        </div>
+
+        <div class="form-group full-width">
+            <label>Address in Zambia</label>
+            <textarea name="hostAddress" rows="3"></textarea>
+        </div>
+
+    </div>
+
+    <!-- ================= EMPLOYMENT ================= -->
+
+    <h3>6. Employment Information</h3>
+
+    <div class="form-grid">
+
+        <div class="form-group">
+            <label>Occupation *</label>
+            <input type="text" name="occupation" required>
+        </div>
+
+        <div class="form-group">
+            <label>Employer *</label>
+            <input type="text" name="employer" required>
+        </div>
+
+        <div class="form-group full-width">
+            <label>Employer Address</label>
+            <textarea name="employerAddress" rows="3"></textarea>
+        </div>
+
+    </div>
+
+    <!-- ================= DOCUMENTS ================= -->
+
+    <h3>7. Supporting Documents</h3>
+
+    <div class="form-grid">
+
+        <div class="form-group">
+            <label>Passport Bio Page *</label>
+            <input type="file" name="passportCopy" required>
+        </div>
+
+        <div class="form-group">
+            <label>Passport Photograph *</label>
+            <input type="file" name="photo" required>
+        </div>
+
+        <div class="form-group">
+            <label>Flight Itinerary</label>
+            <input type="file" name="flight">
+        </div>
+
+        <div class="form-group">
+            <label>Invitation Letter</label>
+            <input type="file" name="invitation">
+        </div>
+
+        <div class="form-group">
+            <label>Proof of Accommodation</label>
+            <input type="file" name="hotel">
+        </div>
+
+        <div class="form-group">
+            <label>Additional Documents</label>
+            <input type="file" name="additional" multiple>
+        </div>
+
+    </div>
+
+    <!-- ================= DECLARATION ================= -->
+
+    <h3>8. Declaration</h3>
+
+    <div class="form-group">
+
+        <label>
+            <input type="checkbox" required>
+
+            I declare that the information provided is true and complete. I understand that providing false or misleading information may result in the refusal of my visa application.
+        </label>
+
+    </div>
+
+    <br>
+
+    <button type="submit" class="submit-btn">
+        Submit Visa Application
+    </button>
+
+</form>
+
+
+
+
+
+<div class="end-container">
+<footer class="end">
+  <p>Zambia High Commission |  Contact: info@example.com / call: +44 7366967803  |  find us at: Zambia House, 2 Palace Gate, Kensington, London W8 5NG</p>
+  <p>2026 all rights reserved. Developed by Kazhama Mupuchi</p>
+</footer>
+</div>
