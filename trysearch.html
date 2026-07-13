@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="trysearch.css">
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<div class="search-box">
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search visas, passports, appointments..."
+        autocomplete="off"
+    >
+
+    <button id="searchButton">
+        Search
+    </button>
+
+    <div id="suggestions" class="suggestions"></div>
+
+</div>
+
+<div id="searchResults"></div>
+
+<script>
+    const searchData = [
+
+{
+title:"Tourist Visa",
+description:"Information about tourist visas.",
+keywords:"tourist holiday visit travel visa",
+url:"visa.html#tourist"
+},
+
+{
+title:"Business Visa",
+description:"Apply for a business visa.",
+keywords:"business investor meeting work",
+url:"visa.html#business"
+},
+
+{
+title:"Student Visa",
+description:"Requirements for student visas.",
+keywords:"student university school education",
+url:"visa.html#student"
+},
+
+{
+title:"Passport Renewal",
+description:"Renew your Zambian passport.",
+keywords:"passport renewal expired lost damaged",
+url:"passport.html#renew"
+},
+
+{
+title:"Emergency Travel Document",
+description:"Travel document for lost passports.",
+keywords:"emergency passport lost travel document",
+url:"passport.html#emergency"
+},
+
+{
+title:"Appointments",
+description:"Book a High Commission appointment.",
+keywords:"appointment booking reserve",
+url:"appointment.html"
+},
+
+{
+title:"Consular Services",
+description:"Birth, marriage, notary and certification.",
+keywords:"consular birth marriage notary",
+url:"consular.html"
+},
+
+{
+title:"Contact Us",
+description:"Office address and contact information.",
+keywords:"contact email phone address",
+url:"contact.html"
+}
+
+];
+
+const input = document.getElementById("searchInput");
+const suggestions = document.getElementById("suggestions");
+const results = document.getElementById("searchResults");
+
+input.addEventListener("input", function(){
+
+const value = this.value.toLowerCase().trim();
+
+suggestions.innerHTML="";
+
+if(value===""){
+    suggestions.style.display="none";
+    return;
+}
+
+const matches = searchData.filter(item =>
+item.title.toLowerCase().includes(value) ||
+item.keywords.toLowerCase().includes(value)
+);
+
+if(matches.length===0){
+    suggestions.style.display="none";
+    return;
+}
+
+matches.forEach(item=>{
+
+const div=document.createElement("div");
+
+div.className="suggestion-item";
+
+div.innerHTML=item.title;
+
+div.onclick=function(){
+
+window.location.href=item.url;
+
+};
+
+suggestions.appendChild(div);
+
+});
+
+suggestions.style.display="block";
+
+});
+
+document.getElementById("searchButton").addEventListener("click", searchWebsite);
+
+input.addEventListener("keypress",function(e){
+
+if(e.key==="Enter"){
+searchWebsite();
+}
+
+});
+
+function searchWebsite(){
+
+const value=input.value.toLowerCase().trim();
+
+results.innerHTML="";
+
+suggestions.style.display="none";
+
+const matches=searchData.filter(item=>
+
+item.title.toLowerCase().includes(value) ||
+item.description.toLowerCase().includes(value) ||
+item.keywords.toLowerCase().includes(value)
+
+);
+
+if(matches.length===0){
+
+results.innerHTML="<p>No results found.</p>";
+
+return;
+
+}
+
+matches.forEach(item=>{
+
+results.innerHTML += `
+
+<div class="result-card">
+
+<h3>${item.title}</h3>
+
+<p>${item.description}</p>
+
+<a href="${item.url}">Read More →</a>
+
+</div>
+
+`;
+
+});
+
+}
+</script>
+

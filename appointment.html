@@ -24,50 +24,50 @@
 
         <h2>Appointment Request Form</h2>
 
-        <form action="#" method="post">
+        <form id="appointmentForm" action="#" method="post">
 
             <div class="form-grid">
 
                 <div class="form-group">
                     <label>First Name *</label>
-                    <input type="text" name="firstname" required>
+                    <input type="text" name="firstname" required id="firstname">
                 </div>
 
                 <div class="form-group">
                     <label>Last Name *</label>
-                    <input type="text" name="lastname" required>
+                    <input type="text" name="lastname" required id="lastname">
                 </div>
 
                 <div class="form-group">
                     <label>Email Address *</label>
-                    <input type="email" name="email" required>
+                    <input type="email" name="email" required id="email">
                 </div>
 
                 <div class="form-group">
                     <label>Phone Number *</label>
-                    <input type="tel" name="phone" required>
+                    <input type="tel" name="phone" required id="phone">
                 </div>
 
                 <div class="form-group">
                     <label>Nationality *</label>
-                    <input type="text" name="nationality" required>
+                    <input type="text" name="nationality" required id="nationality">
                 </div>
 
                 <div class="form-group">
                     <label>Passport Number *</label>
-                    <input type="text" name="passport" required>
+                    <input type="text" name="passport" required id="passport"> 
                 </div>
 
                 <div class="form-group">
                     <label>Preferred Appointment Date *</label>
-                    <input type="date" name="date" required>
+                    <input type="date" name="date" required id="date">
                 </div>
 
                 <div class="form-group">
     <label>Available Time Slot *</label>
 
-    <select name="timeSlot" required>
-        <option value="">-- Select a Time Slot --</option>
+    <select id="time" name="timeSlot" required>
+        <option value="" >-- Select a Time Slot --</option>
         <option>09:00 AM</option>
         <option>09:30 AM</option>
         <option>10:00 AM</option>
@@ -86,7 +86,7 @@
                 <div class="form-group">
                     <label>Appointment Type *</label>
 
-                    <select name="appointmentType" required>
+                    <select id="appointmentType" name="appointment" required>
                         <option value="">-- Select Appointment Type --</option>
                         <option>Visa Application</option>
                         <option>Passport Renewal</option>
@@ -104,7 +104,7 @@
                 <div class="form-group">
     <label>Application Type *</label>
 
-    <select name="applicationType" required>
+    <select id="applicationType" name="application" required>
         <option value="">-- Select Application Type --</option>
         <option value="self">Self Application</option>
         <option value="someone_else">Applying on Behalf of Someone Else</option>
@@ -117,7 +117,7 @@
 
                 <label>Reason for Appointment *</label>
 
-                <textarea rows="6" placeholder="Please briefly describe the purpose of your appointment." required></textarea>
+                <textarea rows="6" placeholder="Please briefly describe the purpose of your appointment." required id="reason"></textarea>
 
             </div>
 
@@ -139,6 +139,74 @@
     </div>
 
 </section>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init({
+    publicKey: "0cZDejdQgv4Y8_pYh",
+});
+</script>
+
+
+<script>
+    document.getElementById("appointmentForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const params = {
+        firstname: document.getElementById("firstname").value,
+        lastname: document.getElementById("lastname").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        nationality: document.getElementById("nationality").value,
+        passport: document.getElementById("passport").value,
+        date: document.getElementById("date").value,
+        time: document.getElementById("time").value,
+        appointment: document.getElementById("appointmentType").value,
+        application: document.getElementById("applicationType").value,
+        reason: document.getElementById("reason").value
+    };
+
+    emailjs.send(
+    "service_p90jppg",
+    "template_shlk4i9",
+    params
+)
+    .then(() => {
+        alert("Appointment booked successfully!");
+        document.getElementById("appointmentForm").reset();
+    })
+    .catch((error) => {
+        alert("Failed to send appointment.");
+        console.error(error);
+    });
+});
+</script>
+
+
+
+
+
+<script>
+const dateInput = document.getElementById("date");
+const timeInput = document.getElementById("time");
+
+const today = new Date().toISOString().split("T")[0];
+dateInput.min = today;
+
+dateInput.addEventListener("change", function () {
+    const now = new Date();
+
+    if (this.value === today) {
+        let hours = String(now.getHours()).padStart(2, "0");
+        let minutes = String(now.getMinutes()).padStart(2, "0");
+
+        timeInput.min = `${hours}:${minutes}`;
+    } else {
+        timeInput.removeAttribute("min");
+    }
+});
+</script>
 
 <div class="end-container">
 <footer class="end">
