@@ -17,6 +17,13 @@
     font-family: sans-serif;
 }
 
+.intro{
+    font-size: clamp(4px, 2vw, 15px);
+}
+.container p{
+    font-size: clamp(5px, 2vw, 20px);
+}
+
 .page-banner h2{
     margin-bottom:10px;
 }
@@ -31,6 +38,7 @@
     font-family: sans-serif;
     font-weight:bold;
     transition: 0.2s;
+    font-size: clamp(5px, 2vw, 20px);
 }
 .btn:hover{
     color: orange;
@@ -74,6 +82,7 @@
 
 .visa-container p{
     line-height:1.8;
+    font-size: clamp(5px, 2vw, 20px);
 }
 
 .visa-grid{
@@ -92,6 +101,7 @@
     transition:.3s;
     font-family: sans-serif;
     margin-bottom: 20px;
+    font-size: clamp(5px, 2vw, 20px);
 }
 
 .visa-card:hover{
@@ -109,6 +119,7 @@
     line-height:2;
     font-family: sans-serif;
     list-style-type:  none;
+    font-size: clamp(5px, 2vw, 20px);
 }
 
 .action-box{
